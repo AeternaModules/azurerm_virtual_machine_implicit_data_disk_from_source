@@ -21,7 +21,7 @@ EOT
     source_resource_id        = string
     virtual_machine_id        = string
     caching                   = optional(string)
-    write_accelerator_enabled = optional(bool, false)
+    write_accelerator_enabled = optional(bool) # Default: false
   }))
 }
 
