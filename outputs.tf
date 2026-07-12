@@ -1,3 +1,7 @@
+output "virtual_machine_implicit_data_disk_from_sources_id" {
+  description = "Map of id values across all virtual_machine_implicit_data_disk_from_sources, keyed the same as var.virtual_machine_implicit_data_disk_from_sources"
+  value       = { for k, v in azurerm_virtual_machine_implicit_data_disk_from_source.virtual_machine_implicit_data_disk_from_sources : k => v.id }
+}
 output "virtual_machine_implicit_data_disk_from_sources_caching" {
   description = "Map of caching values across all virtual_machine_implicit_data_disk_from_sources, keyed the same as var.virtual_machine_implicit_data_disk_from_sources"
   value       = { for k, v in azurerm_virtual_machine_implicit_data_disk_from_source.virtual_machine_implicit_data_disk_from_sources : k => v.caching }
